@@ -1,0 +1,36 @@
+---
+name: update-github-info
+description: Keep Mona's GitHub Info page current with practical updates from official GitHub sources.
+on: daily
+
+permissions:
+  contents: read
+  pull-requests: read
+
+tools:
+  edit:
+  web-fetch:
+
+network:
+  allowed:
+    - github.blog
+    - github.com
+
+safe-outputs:
+  create-pull-request:
+    title-prefix: "[github-info] "
+    draft: false
+---
+
+# Update GitHub Info
+
+Read `notes/mona-notes.md` and `site/content/github-info.md` before making any changes. Use Mona's notes as editorial guidance, and preserve the page's existing focus on practical GitHub guidance.
+
+Fetch both official sources with the web-fetch tool:
+
+- https://github.blog/latest/
+- https://github.blog/changelog/
+
+Review recent items and select only updates that are useful to developers learning GitHub. Verify every factual claim against the fetched source. Keep summaries short and practical, and include a direct source link for each update. Do not invent details, repeat stale items, or rewrite unrelated page content.
+
+Edit only `site/content/github-info.md`. If there is no worthwhile update, leave the file unchanged and do not open a pull request. Otherwise, prepare a concise draft pull request for Mona to review through the configured `create-pull-request` safe output. Summarize the page changes and cite the official source URLs in the pull request description. Never write directly to the default branch or merge the pull request.
