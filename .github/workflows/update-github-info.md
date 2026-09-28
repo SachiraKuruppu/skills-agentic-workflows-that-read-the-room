@@ -1,6 +1,7 @@
 ---
 name: update-github-info
 description: Keep Mona's GitHub Info page current with practical updates from official GitHub sources.
+model: copilot/gpt-4.1
 on:
   workflow_dispatch:
   schedule: daily
