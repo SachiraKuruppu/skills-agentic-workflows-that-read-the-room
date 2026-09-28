@@ -30,7 +30,9 @@ safe-outputs:
 
 Read `notes/mona-notes.md` and `site/content/github-info.md` before making any changes. Use Mona's notes as editorial guidance, and preserve the page's existing focus on practical GitHub guidance.
 
-Fetch all three sources with the web-fetch tool:
+Fetch all three sources using only the `web-fetch` tool. Do not use shell commands,
+`curl`, `wget`, or another tool to retrieve these URLs. If `web-fetch` cannot
+retrieve a source, report the failed URL and do not try another retrieval method.
 
 - https://github.blog/latest/
 - https://github.blog/changelog/
