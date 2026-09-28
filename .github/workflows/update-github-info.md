@@ -17,6 +17,7 @@ network:
   allowed:
     - github.blog
     - github.com
+    - awesome-copilot.github.com
 
 safe-outputs:
   create-pull-request:
@@ -28,10 +29,11 @@ safe-outputs:
 
 Read `notes/mona-notes.md` and `site/content/github-info.md` before making any changes. Use Mona's notes as editorial guidance, and preserve the page's existing focus on practical GitHub guidance.
 
-Fetch both official sources with the web-fetch tool:
+Fetch all three sources with the web-fetch tool:
 
 - https://github.blog/latest/
 - https://github.blog/changelog/
+- https://awesome-copilot.github.com/workflows/
 
 Review recent items and select only updates that are useful to developers learning GitHub. Verify every factual claim against the fetched source. Keep summaries short and practical, and include a direct source link for each update. Do not invent details, repeat stale items, or rewrite unrelated page content.
 
